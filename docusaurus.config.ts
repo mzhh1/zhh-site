@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: '纸灰灰的网站',
-  tagline: 'Tracing footprints on the wind',
+  tagline: '「Tracing footprints on the wind」',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -39,23 +39,13 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false, // 禁用默认的 docs 插件，改用多实例
         blog: {
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -65,6 +55,27 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'projects',
+        path: 'docs',
+        routeBasePath: 'docs',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'thoughts',
+        path: 'docs2',
+        routeBasePath: 'thoughts',
+        sidebarPath: './sidebars2.ts',
+      },
     ],
   ],
 
@@ -83,9 +94,17 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
+          sidebarId: 'thoughtsSidebar',
+          position: 'left',
+          label: 'Thoughts',
+          docsPluginId: 'thoughts',
+        },
+        {
+          type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Projects',
+          docsPluginId: 'projects',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -101,6 +120,10 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
+            {
+              label: 'Thoughts',
+              to: '/thoughts/intro',
+            },
             {
               label: 'Projects',
               to: '/docs/intro',
@@ -138,7 +161,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} zhh-site, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
