@@ -161,7 +161,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} zhh-site, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} zhh-site. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
