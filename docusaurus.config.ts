@@ -118,40 +118,36 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '文档',
           items: [
             {
-              label: 'Thoughts',
+              label: '想法',
               to: '/thoughts/intro',
             },
             {
-              label: 'Projects',
+              label: '项目文档',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Community',
+          title: '项目',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: '星枢沙盒',
+              href: 'https://nexus.mzhh.xyz',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
+              label: '纸核',
+              href: 'https://114.132.91.247/',
+            }
           ],
         },
         {
-          title: 'More',
+          title: '更多',
           items: [
             {
-              label: 'Blog',
+              label: '生活',
               to: '/blog',
             },
             {
