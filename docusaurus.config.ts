@@ -24,7 +24,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'mzhh1', // Usually your GitHub org/user name.
   projectName: 'zhh-site', // Usually your repo name.
-  trailingSlash: false,
+  trailingSlash: undefined,
   onBrokenLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
