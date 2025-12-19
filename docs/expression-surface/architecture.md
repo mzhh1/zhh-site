@@ -1,4 +1,10 @@
-# 表达面 (Expression Surface) - 技术架构设计文档 v2.0
+---
+sidebar_position: 2
+---
+
+# 架构方案
+
+## 表达面 (Expression Surface) - 技术架构设计文档 v2.0
 
 ## 1\. 项目概述 (Overview)
 
