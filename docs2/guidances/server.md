@@ -1,14 +1,14 @@
 # 配置网页服务
 
-## 1.需要拥有一个项目。想一个前缀名xx，(端口号yy)。
+### 1.需要拥有一个项目。想一个前缀名xx，(端口号yy)。
 
-## 2.在腾讯云添加xx.mzhh.xyz的域名解析(A记录)。
+### 2.在腾讯云添加xx.mzhh.xyz的域名解析(A记录)。
 
-## 3.添加nginx配置
+### 3.添加nginx配置
 
 sudo nano /etc/nginx/sites-available/xx.mzhh.xyz
 
-### 反向代理
+#### 反向代理
 
 添加
 
@@ -41,7 +41,7 @@ server {
 }
 ```
 
-### 静态文件托管
+#### 静态文件托管
 
 ```
 server {
@@ -87,7 +87,7 @@ server {
 }
 ```
 
-## 4.生效nginx配置
+### 4.生效nginx配置
 
 sudo ln -s /etc/nginx/sites-available/xx.mzhh.xyz /etc/nginx/sites-enabled/
 
